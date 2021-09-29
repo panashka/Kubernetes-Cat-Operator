@@ -1,0 +1,7 @@
+apiVersion: "dev.com/v1"
+kind: Cat
+metadata:
+  name: fluffy-cat
+spec:
+  kittyname: barsik
+  image: nginx:stable-alpine

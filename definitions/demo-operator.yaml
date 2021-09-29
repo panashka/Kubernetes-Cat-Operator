@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-operator
+  template:
+    metadata:
+      labels:
+        app: demo-operator
+    spec:
+      serviceAccountName: cat-operator-service-account
+      containers:
+        - name: operator
+          image: 80444561333/demo-operator
+
+
